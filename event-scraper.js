@@ -212,7 +212,7 @@ async function runScraper() {
   console.log('\n🚀 === EVENT SCRAPER STARTUP ===\n');
   
   // Init Supabase
-  supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+  supabase = createClient(SUPABASE_URL, SUPABASE_KEY, { realtime: { transport: undefined } });
   
   try {
     // Scraper toutes les sources
